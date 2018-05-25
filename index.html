@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Wifi Loyalty
+    </title>
+    <script>
+
+
+
+function submitAction(){
+
+      var link = document.location.href;
+
+      var searchString = "redirect=";
+
+      var equalIndex = link.indexOf(searchString);
+
+      var redirectUrl = "https://c00.adobe.com/v3/ef4214e651a241733452eed39d2c83df2ab9cbf08bc6a27d023cbaab3c028ba2/start?a_dl=5b056c0b511fb41c632367fe";
+
+
+
+      if (document.forms[0].action == "") {
+
+      var url = window.location.href;
+
+      var args = new Object();
+
+      var query = location.search.substring(1);
+
+      var pairs = query.split("&");
+
+          for(var i=0;i<pairs.length;i++){
+
+              var pos = pairs[i].indexOf('=');
+
+              if(pos == -1) continue;
+
+              var argname = pairs[i].substring(0,pos);
+
+              var value = pairs[i].substring(pos+1);
+
+              args[argname] = unescape(value);
+
+          }
+
+          document.forms[0].action = args.switch_url;       
+
+      }       
+
+      document.forms[0].redirect_url.value = redirectUrl;
+
+      document.forms[0].buttonClicked.value = 4;
+
+      document.forms[0].submit();
+
+}
+
+
+
+function reject()
+
+{
+
+  alert("You will not be able to access the system!");
+
+}
+
+
+
+
+
+function loadAction(){
+
+      var url = window.location.href;
+
+      var args = new Object();
+
+      var query = location.search.substring(1);
+
+      var pairs = query.split("&");
+
+      for(var i=0;i<pairs.length;i++){
+
+          var pos = pairs[i].indexOf('=');
+
+          if(pos == -1) continue;
+
+          var argname = pairs[i].substring(0,pos);
+
+          var value = pairs[i].substring(pos+1);
+
+          args[argname] = unescape(value);
+
+      }
+
+      document.forms[0].action = args.switch_url;
+
+
+
+}
+
+
+
+
+
+</script>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Meta Tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <!-- Template Styles-->
+    <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 768px;
+    }
+
+    .wrap {
+      background-color: #9E1C6D;
+      padding: 10px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    </style>
+
+
+  </head>
+  <!-- Body-->
+  <body onload="loadAction();">
+    <form method="post"> <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0"> <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE=""> <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">
+   
+  <div class="container">
+    <div class="row">
+       <div class="col-xs-12">
+
+        <img src="http://image.email-totalwine.com/lib/fecc157071620079/m/22/c61e9f2c-ab6d-43d7-9723-69e3ac633dca.png" class="img-fluid" />
+        <div class="wrap">&amp;More Rewards Perks</div>
+         
+          <div class="content">
+             <table class="table">
+              <tr>
+                <td style="border: none;"><img src="http://image.email-totalwine.com/lib/fecc157071620079/m/22/be1c797b-4612-4049-aa50-3c837fca6243.png" /></td>
+                <td style="border: none;">$5 Reward Certificates</td>
+              </tr>
+              <tr>
+                <td><img src="http://image.email-totalwine.com/lib/fecc157071620079/m/22/be1c797b-4612-4049-aa50-3c837fca6243.png" /></td>
+                <td>Bonus Points and Promotions</td>
+              </tr>
+              <tr>
+                <td><img src="http://image.email-totalwine.com/lib/fecc157071620079/m/22/be1c797b-4612-4049-aa50-3c837fca6243.png" /></td>
+                <td>More Perks</td>
+              </tr>
+             </table>
+
+             <p><b>Download our app to become an &amp;More Rewards member and enjoy these perks.</b></p>
+
+             <p><input type="button" name="App" value="Download our App" class="button btn btn-lg btn-primary btn-block" onclick="submitAction();"></p>
+
+          </div>
+
+       </div>
+    </div>
+
+  </div>
+
+
+</form>
+
+  </body>
+</html>
